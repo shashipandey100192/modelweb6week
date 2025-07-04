@@ -1,9 +1,15 @@
 .myapp
 {
-    width:100px;
-    height: 100px;
+    width:150px;
+    height: 150px;
     border-radius: 50%;
     display: inline-block;
     padding-top: 10px;
 
+}
+
+.mysidebar a
+{
+    display: flex;
+    align-items: center;
 }

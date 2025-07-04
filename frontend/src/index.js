@@ -7,6 +7,7 @@ import "./app/css/global.css";
 import Welcomeapp from './app/Welcomeapp';
 import Loginpage from './app/appmodules/auth/Loginpage';
 import Registorpage from './app/appmodules/auth/Registorpage';
+import Mainpage from './app/appmodules/dashboard/Mainpage';
 
 
 
@@ -19,7 +20,7 @@ root.render(
         <Route path='' element={<Welcomeapp/>}></Route>
         <Route path='userportal' element={<Loginpage/>}></Route>
         <Route path='userportal/registor' element={<Registorpage/>}></Route>
-        
+        <Route path='dashboard' element={<Mainpage/>}></Route>
 
       </Routes>
     </BrowserRouter>
