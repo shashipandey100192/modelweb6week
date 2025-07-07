@@ -3,6 +3,7 @@ import Appheaderpage from '../../shares/Appheaderpage'
 import Appsidenavbar from '../../shares/Appsidenavbar'
 import Homepage from './Homepage'
 import Appfooterpage from '../../shares/Appfooterpage'
+import { Outlet } from 'react-router-dom'
 
 function Mainpage() {
   return (
@@ -13,8 +14,8 @@ function Mainpage() {
                 <div className='col-md-2 border g-0'>
                         <Appsidenavbar></Appsidenavbar>
                 </div>
-                <div className='col-md-10'>
-                    <Homepage></Homepage>
+                <div className='col-md-10 g-0'>
+                   <Outlet></Outlet>
                 </div>
             </div>
             <div className='row'>

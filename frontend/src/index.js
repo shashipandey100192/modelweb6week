@@ -8,6 +8,11 @@ import Welcomeapp from './app/Welcomeapp';
 import Loginpage from './app/appmodules/auth/Loginpage';
 import Registorpage from './app/appmodules/auth/Registorpage';
 import Mainpage from './app/appmodules/dashboard/Mainpage';
+import Landingpage from './app/appmodules/dashboard/Landingpage';
+import Homepage from './app/appmodules/dashboard/Homepage';
+import Employeepage from './app/appmodules/dashboard/Employeepage';
+import Apperrorpage from './app/shares/Apperrorpage';
+import Aboutpage from './app/appmodules/dashboard/Aboutpage';
 
 
 
@@ -20,7 +25,16 @@ root.render(
         <Route path='' element={<Welcomeapp/>}></Route>
         <Route path='userportal' element={<Loginpage/>}></Route>
         <Route path='userportal/registor' element={<Registorpage/>}></Route>
-        <Route path='dashboard' element={<Mainpage/>}></Route>
+        <Route path='dashboard' element={<Mainpage/>}>
+          <Route path='' element={<Homepage/>}></Route>
+          <Route path='dashboard' element={<Landingpage/>}></Route>
+          <Route path='employeelist' element={<Employeepage/>}></Route>
+          <Route path='about' element={<Aboutpage/>}></Route>
+          <Route path='*' element={<Apperrorpage/>}></Route>
+
+        </Route>
+
+        <Route path='*' element={<Apperrorpage/>}></Route>
 
       </Routes>
     </BrowserRouter>
