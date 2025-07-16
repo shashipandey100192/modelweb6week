@@ -1,15 +1,21 @@
 const express = require("express");
+const cors = require('cors');
 const myapp = express();
 require('dotenv').config();
 require('./database/connectdb');
+const myrouting = require("./routing/routes");
+
 const port = process.env.PORT || 6900
 
-myapp.get("/",(req,res)=>{
-    res.send("welcome to express js");
-});
 
 
 
+
+
+
+myapp.use(express.json());
+myapp.use(myrouting);
+myapp.use(cors());
 
 
 
