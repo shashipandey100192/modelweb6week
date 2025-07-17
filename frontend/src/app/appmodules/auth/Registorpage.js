@@ -1,14 +1,27 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {useForm} from 'react-hook-form';
+import axios from 'axios';
+
 
 
 function Registorpage() {
 
+    const mynav = useNavigate();
     const {register, handleSubmit,formState: { errors }} = useForm();
 
-const myformsubmit = (e)=>{
+const myformsubmit = async (e)=>{
     console.log(e);
+    await axios.post('http://localhost:7800/userregistor',e).then((d)=>{
+        console.log(d);
+        if(d.data.status===251)
+        {
+            alert("registor successfully now");
+                mynav("/userportal");
+
+        }
+    })
+
 }
 
 

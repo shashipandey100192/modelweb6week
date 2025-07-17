@@ -14,8 +14,9 @@ const port = process.env.PORT || 6900
 
 
 myapp.use(express.json());
-myapp.use(myrouting);
 myapp.use(cors());
+myapp.use(myrouting);
+
 
 
 

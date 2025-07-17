@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function Employeepage() {
+    const [user,updateuser]=useState([]);
+
+const getallusers = async()=>{
+    await axios.get("http://localhost:7800/allusers").then((d)=>{
+        console.log(d.data.alluser);
+        updateuser(d.data.alluser);
+    })
+}
+
+useEffect(()=>{
+    getallusers();
+},[]);
+
+
     return (
 
         <div className='container-fluid mt-5'>
@@ -12,19 +28,36 @@ function Employeepage() {
                     <table class="table table-bordered border-primary">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col">EmpNo</th>
+                                <th scope="col">Full Name</th>
+                                <th scope="col">Email Id</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">DOB</th>
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+
+                        {user.map((u)=>{
+                            return(
+                                 <tr>
+                                <th scope="row">{u._id}</th>
+                                <td>{u.fullname}</td>
+                                <td>{u.email}</td>
+                                <td>{u.gender}</td>
+                                <td>{u.pass}</td>
+                                <td>{u.dob}</td>
+                                <td>
+                                    <Link to="" className='btn btn-info btn-sm ms-2'>View</Link>
+                                    <Link to="" className='btn btn-warning btn-sm ms-2'>Edit</Link>
+                                    <Link to="" className='btn btn-danger btn-sm ms-2'>Del</Link>
+                                </td>
                             </tr>
+                            )
+                        })}
+
+                           
                         </tbody>
                     </table>
 
