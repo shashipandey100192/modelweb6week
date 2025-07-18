@@ -24,7 +24,24 @@ myapp.post("/userregistor", async (req,res)=>{
 myapp.get("/allusers", async(req,res)=>{
     const userlist = await mycollectionname.find();
     res.send({alluser:userlist,msg:"display all userlist",status:221});
+});
+
+
+myapp.delete("/userdelete/:id",async (req,res)=>{
+    const id = req.params.id;
+    const removeuser = await mycollectionname.findByIdAndDelete({_id:id});
+    res.send({alluser:removeuser,msg:"user delete",status:225});
+});
+
+
+myapp.get("/singleuser/:id", async(req,res)=>{
+    const id = req.params.id;
+    const singleuser = await mycollectionname.findById({_id:id});
+    res.send({single:singleuser,msg:"get single user",status:251});
+
 })
+
+
 
 
 module.exports = myapp;

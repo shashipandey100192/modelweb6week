@@ -17,6 +17,14 @@ useEffect(()=>{
 },[]);
 
 
+const userdelete =async (id)=>{
+    await axios.delete(`http://localhost:7800/userdelete/${id}`).then((d)=>{
+        console.log(d);
+    });
+     getallusers();
+}
+
+
     return (
 
         <div className='container-fluid mt-5'>
@@ -49,9 +57,9 @@ useEffect(()=>{
                                 <td>{u.pass}</td>
                                 <td>{u.dob}</td>
                                 <td>
-                                    <Link to="" className='btn btn-info btn-sm ms-2'>View</Link>
+                                    <Link to={`singleuserdata/`+u._id} className='btn btn-info btn-sm ms-2'>View</Link>
                                     <Link to="" className='btn btn-warning btn-sm ms-2'>Edit</Link>
-                                    <Link to="" className='btn btn-danger btn-sm ms-2'>Del</Link>
+                                    <button type='button' className='btn btn-danger btn-sm ms-2' onClick={()=>userdelete(u._id)}>Del</button>
                                 </td>
                             </tr>
                             )
