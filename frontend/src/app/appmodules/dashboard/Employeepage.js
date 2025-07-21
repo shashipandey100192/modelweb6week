@@ -58,7 +58,7 @@ const userdelete =async (id)=>{
                                 <td>{u.dob}</td>
                                 <td>
                                     <Link to={`singleuserdata/`+u._id} className='btn btn-info btn-sm ms-2'>View</Link>
-                                    <Link to="" className='btn btn-warning btn-sm ms-2'>Edit</Link>
+                                    <Link to={`editpage/`+u._id} className='btn btn-warning btn-sm ms-2'>Edit</Link>
                                     <button type='button' className='btn btn-danger btn-sm ms-2' onClick={()=>userdelete(u._id)}>Del</button>
                                 </td>
                             </tr>

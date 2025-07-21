@@ -14,6 +14,7 @@ import Employeepage from './app/appmodules/dashboard/Employeepage';
 import Apperrorpage from './app/shares/Apperrorpage';
 import Aboutpage from './app/appmodules/dashboard/Aboutpage';
 import Employeedetailspage from './app/appmodules/dashboard/Employeedetailspage';
+import Employeeeditpage from './app/appmodules/dashboard/Employeeeditpage';
 
 
 
@@ -31,6 +32,7 @@ root.render(
           <Route path='dashboard' element={<Landingpage/>}></Route>
           <Route path='employeelist' element={<Employeepage/>}></Route>
           <Route path='employeelist/singleuserdata/:id' element={<Employeedetailspage/>}></Route>
+          <Route path='employeelist/editpage/:id' element={<Employeeeditpage/>}></Route>
           <Route path='about' element={<Aboutpage/>}></Route>
           <Route path='*' element={<Apperrorpage/>}></Route>
 

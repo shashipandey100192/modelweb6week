@@ -29,8 +29,6 @@ useEffect(()=>{
         <h3>Gender: {user.gender}</h3>
         <h3>DOB: {user.dob}</h3>
         <h3></h3>
-
-        
          </div>
   )
 }

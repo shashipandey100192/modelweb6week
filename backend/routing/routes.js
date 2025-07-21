@@ -38,7 +38,14 @@ myapp.get("/singleuser/:id", async(req,res)=>{
     const id = req.params.id;
     const singleuser = await mycollectionname.findById({_id:id});
     res.send({single:singleuser,msg:"get single user",status:251});
+});
 
+
+myapp.patch("/updateuser/:id", async (req,res)=>{
+    const id = req.params.id;
+    const updatedata = await mycollectionname.findByIdAndUpdate(id,req.body,{new:true});
+    res.send({data:updatedata,msg:"user updated",status:370});
+    
 })
 
 
