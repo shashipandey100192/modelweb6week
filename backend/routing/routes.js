@@ -46,7 +46,36 @@ myapp.patch("/updateuser/:id", async (req,res)=>{
     const updatedata = await mycollectionname.findByIdAndUpdate(id,req.body,{new:true});
     res.send({data:updatedata,msg:"user updated",status:370});
     
+});
+
+myapp.post("/userlogin", async (req,res)=>{
+    const {email,pass} = req.body;
+        if(email=="" || pass=="")
+        {
+            res.send({msg:"email and password is blank",status:420});
+        }
+        else
+        {
+            const loginuser = await mycollectionname.findOne({email:email});
+                if(loginuser)
+                {
+                    if(loginuser.email==email && loginuser.pass==pass)
+                    {
+                        res.send({msg:"user login successfully",status:221});
+                    }
+                    else
+                    {
+                        res.send({msg:"password is not match",status:421});
+                    }
+                }
+                else
+                {
+                    res.send({msg:"user not found",status:440});
+                }
+        }
+
 })
+
 
 
 
