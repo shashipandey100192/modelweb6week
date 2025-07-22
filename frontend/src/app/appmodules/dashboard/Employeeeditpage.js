@@ -20,7 +20,7 @@ function Employeeeditpage() {
     });
 
     const getsingleuserdata = async () => {
-        await axios.get(`http://localhost:7800/singleuser/${id}`).then((d) => {
+        await axios.get(`https://modelweb6week.onrender.com/singleuser/${id}`).then((d) => {
             console.log(d.data.single);
             updateuser(d.data.single);
         })
@@ -43,7 +43,7 @@ function Employeeeditpage() {
 
 
     const myformsubmit = async () => {
-       await axios.patch(`http://localhost:7800/updateuser/${id}`,user).then((d)=>{
+       await axios.patch(`https://modelweb6week.onrender.com/updateuser/${id}`,user).then((d)=>{
         console.log(d);
        
         if(d.data.status===370)

@@ -10,7 +10,7 @@ function Employeedetailspage() {
      const [user,updateuser]=useState({});
 
 const getsingleuserdata = async()=>{
-    await axios.get(`http://localhost:7800/singleuser/${id}`).then((d)=>{
+    await axios.get(`https://modelweb6week.onrender.com/singleuser/${id}`).then((d)=>{
         console.log(d.data.single);
         updateuser(d.data.single);
     })

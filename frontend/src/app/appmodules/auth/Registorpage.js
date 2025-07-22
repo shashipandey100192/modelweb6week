@@ -12,7 +12,7 @@ function Registorpage() {
 
 const myformsubmit = async (e)=>{
     console.log(e);
-    await axios.post('http://localhost:7800/userregistor',e).then((d)=>{
+    await axios.post('https://modelweb6week.onrender.com/userregistor',e).then((d)=>{
         console.log(d);
         if(d.data.status===251)
         {

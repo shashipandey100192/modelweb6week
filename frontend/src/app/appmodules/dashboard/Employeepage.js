@@ -6,7 +6,7 @@ function Employeepage() {
     const [user,updateuser]=useState([]);
 
 const getallusers = async()=>{
-    await axios.get("http://localhost:7800/allusers").then((d)=>{
+    await axios.get("https://modelweb6week.onrender.com/allusers").then((d)=>{
         console.log(d.data.alluser);
         updateuser(d.data.alluser);
     })
@@ -18,7 +18,7 @@ useEffect(()=>{
 
 
 const userdelete =async (id)=>{
-    await axios.delete(`http://localhost:7800/userdelete/${id}`).then((d)=>{
+    await axios.delete(`https://modelweb6week.onrender.com/userdelete/${id}`).then((d)=>{
         console.log(d);
     });
      getallusers();
