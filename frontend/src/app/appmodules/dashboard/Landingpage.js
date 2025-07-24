@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+
+
 function Landingpage() {
     return (
         <div className='container-fluid mt-5'>
@@ -39,14 +42,15 @@ function Landingpage() {
                 <div className='col-md-8'>
                     <div class="card mb-3 bg-danger text-white shadow">
                         <div class="card-body text-center">
-                            <h1>graph</h1>
+                            <h2>graph1111</h2>
+                            
                         </div>
                     </div>
                 </div>
                 <div className='col-md-4'>
                     <div class="card mb-3 bg-danger text-white shadow">
                         <div class="card-body text-center">
-                            
+
                         </div>
                     </div>
                 </div>

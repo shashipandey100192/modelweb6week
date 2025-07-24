@@ -15,6 +15,7 @@ import Apperrorpage from './app/shares/Apperrorpage';
 import Aboutpage from './app/appmodules/dashboard/Aboutpage';
 import Employeedetailspage from './app/appmodules/dashboard/Employeedetailspage';
 import Employeeeditpage from './app/appmodules/dashboard/Employeeeditpage';
+import Graphpage from './app/appmodules/dashboard/Graphpage';
 
 
 
@@ -34,6 +35,7 @@ root.render(
           <Route path='employeelist/singleuserdata/:id' element={<Employeedetailspage/>}></Route>
           <Route path='employeelist/editpage/:id' element={<Employeeeditpage/>}></Route>
           <Route path='about' element={<Aboutpage/>}></Route>
+          <Route path='mygraph' element={<Graphpage/>}></Route>
           <Route path='*' element={<Apperrorpage/>}></Route>
 
         </Route>

@@ -43,9 +43,9 @@ function Welcomeapp() {
                     {
                         return (
                         <div className='col-sm-3 text-center mt-3'>
-                            <Link to={"userportal/"+apps.applink} className='border myapp bg-info shadow'>
-                                <FcManager />
-                                <p>{apps.appname}</p>
+                            <Link to={"userportal/"+apps.applink} className='border myapp bg-info shadow' style={{textDecoration:"none"}}>
+                                <FcManager style={{fontSize:50}}/>
+                                <p style={{color:"white",fontSize:20}}>{apps.appname}</p>
                             </Link>
                         </div>
                     )
@@ -54,9 +54,9 @@ function Welcomeapp() {
                     {
                         return (
                         <div className='col-sm-3 text-center mt-3'>
-                            <Link to={apps.applink} className='border myapp bg-info shadow'>
-                                <FcManager />
-                                <p>{apps.appname}</p>
+                            <Link to={apps.applink} className='border myapp bg-info shadow' style={{textDecoration:"none"}}>
+                                <FcManager style={{fontSize:50}}/>
+                                <p style={{color:"white",fontSize:20}}>{apps.appname}</p>
                             </Link>
                         </div>
                     )

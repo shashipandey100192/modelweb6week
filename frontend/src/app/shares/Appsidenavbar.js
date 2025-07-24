@@ -14,13 +14,14 @@ function Appsidenavbar() {
                <li class="nav-item"><Link to="about" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>About</Link> </li>
                <li class="nav-item"><Link to="contact" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Contact</Link> </li>
                <li class="nav-item"><Link to="service" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Service</Link> </li>
-               <li class="nav-item"><Link to="#" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Home</Link> </li>
+               <li class="nav-item"><Link to="mygraph" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Chart</Link> </li>
                <li class="nav-item"><Link to="#" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Home</Link> </li>
                <li class="nav-item"><Link to="#" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Home</Link> </li>
                <li class="nav-item"><Link to="#" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Home</Link> </li>
                <li class="nav-item"><Link to="#" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Home</Link> </li>
                <li class="nav-item"><Link to="#" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Home</Link> </li><li class="nav-item"><Link to="#" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Home</Link> </li>
                <li class="nav-item"><Link to="#" class="nav-link text-white" aria-current="page"><TiHome style={{fontSize:"27px"}}/>Home</Link> </li>
+               
 
             </ul>
         </div>
